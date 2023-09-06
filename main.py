@@ -6,7 +6,7 @@ import pandas as pd
 
 
 def fetch_poster(movie_id):
-    url = "https://api.themoviedb.org/3/movie/{}?api_key=f0bd769149e1bf02f543ac61aa5f068b&language=en-US".format(
+    url = "https://api.themoviedb.org/3/movie/{}?api_key=<Your API>".format(
         movie_id)
     data = requests.get(url)
     data = data.json()
@@ -32,7 +32,7 @@ def recommend(movie):
 
 
 def fetch_trailer(movie_id):
-    url = f"https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=f0bd769149e1bf02f543ac61aa5f068b"
+    url = f"https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=<Your API>"
     response = requests.get(url)
     data = response.json()
     trailers = [video for video in data['results'] if video['site'] == 'YouTube' and video['type'] == 'Trailer']
