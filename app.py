@@ -43,6 +43,7 @@ st.write("Welcome to the Movie Recommender System! Select a movie to get persona
 
 movies_dic = pickle.load(open('movie_dic.pkl', 'rb'))
 movies = pd.DataFrame(movies_dic)
+# similarity file in readme.md file
 similarity = pickle.load(open('similarity.pkl', 'rb'))
 
 
